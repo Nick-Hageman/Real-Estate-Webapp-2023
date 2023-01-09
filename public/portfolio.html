@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/portfolio_style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <!--Bootsrapping scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <title>Hageman Homes</title>
+</head>
+<body>
+    <header>
+        <img class='logo' src="img/transparent-black-logo.png" alt="Hageman Homes Logo" width="250px" height="175px">
+        <nav>
+        <a href='index.html'>Home</a>
+        <a href='map.html'>Available Lots</a>
+        <a href='portfolio.html'>Portfolio</a>
+        <a href='map.html'>Information</a>
+        </nav>
+        <button class="order-online">Contact</button>
+   </header>
+   <div class="row">
+    <div class="column">
+      <img src="img/DJI_0011.jpg">
+      <img src="img/DJI_0009.jpg">
+      <img src="img/DJI_0060.jpg">
+      <img src="img/DJI_0085.jpg">
+    </div>
+    <div class="column">
+      <img src="img/DJI_0097.jpg">
+      <img src="img/DJI_0140.jpg">
+      <img src="img/DJI_0145.jpg">
+      <img src="img/DJI_0146.jpg">
+    </div>
+    <div class="column">
+      <img src="img/DJI_0249.jpg">
+      <img src="img/DJI_0267.jpg">
+      <img src="img/DJI_0327.jpg">
+      <img src="img/DJI_0338.jpg">
+    </div>
+    <script>
+        const menuToggle = document.querySelector('.toggle')
+        const showcase = document.querySelector('.showcase')
+    
+        menuToggle.addEventListener('click', () => {
+          menuToggle.classList.toggle('active')
+          showcase.classList.toggle('active')
+        })
+      </script>
+</body>
+</html>

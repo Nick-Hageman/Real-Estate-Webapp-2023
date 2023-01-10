@@ -7,9 +7,16 @@
     <link rel="stylesheet" href="css/portfolio_style.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
     <!--Bootsrapping scripts-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <title>Hageman Homes</title>
+    <style>
+        header {
+          display: flex; /* Had to do this override method because the bootstrapping was messing up the display format*/
+        }
+      </style>
 </head>
 <body>
     <header>
@@ -22,25 +29,78 @@
         </nav>
         <button class="order-online">Contact</button>
    </header>
-   <div class="row">
-    <div class="column">
-      <img src="img/DJI_0011.jpg">
-      <img src="img/DJI_0009.jpg">
-      <img src="img/DJI_0060.jpg">
-      <img src="img/DJI_0085.jpg">
-    </div>
-    <div class="column">
-      <img src="img/DJI_0097.jpg">
-      <img src="img/DJI_0140.jpg">
-      <img src="img/DJI_0145.jpg">
-      <img src="img/DJI_0146.jpg">
-    </div>
-    <div class="column">
-      <img src="img/DJI_0249.jpg">
-      <img src="img/DJI_0267.jpg">
-      <img src="img/DJI_0327.jpg">
-      <img src="img/DJI_0338.jpg">
-    </div>
+       <section class="showcase">
+        <div class="topBar">
+            <header style="background: black;">
+                <a href="index.html"><img class='logo' src="img/transparent-black-logo.png" alt="Hageman Homes Logo" width="250px" height="150px"></a>
+                <div class="toggle"></div>
+            </header>
+        </div>
+        <div class="container-fluid">
+            <div class="row mt-4">
+                <div class="item col-sm-6 col-md-4 mb-3">
+                    <a href="img/DJI_0249.JPG" class="fancybox" data-fancybox="gallery1">
+                        <img src="img/DJI_0085.JPG" width="100%" height="100%">
+                    </a>
+                </div>
+                <div class="item col-sm-6 col-md-4 mb-3">
+                    <a href="img/DJI_0060.jpg" class="fancybox" data-fancybox="gallery1">
+                        <img src="img/DJI_0060.jpg" width="100%" height="100%">
+                    </a>
+                </div>
+                <div class="item col-sm-6 col-md-4 mb-3">
+                    <a href="img/DJI_0146.jpg" class="fancybox" data-fancybox="gallery1">
+                        <img src="img/DJI_0146.jpg" width="100%" height="100%">
+                    </a>
+                </div>
+                <div class="item col-sm-6 col-md-4 mb-3">
+                    <a href="img/DJI_0011.jpg" class="fancybox" data-fancybox="gallery1">
+                        <img src="img/DJI_0011.jpg" width="100%" height="100%">
+                    </a>
+                </div>
+                <div class="item col-sm-6 col-md-4 mb-3">
+                    <a href="img/DJI_0009.jpg" class="fancybox" data-fancybox="gallery1">
+                        <img src="img/DJI_0009.jpg" width="100%" height="100%">
+                    </a>
+                </div>
+                <div class="item col-sm-6 col-md-4 mb-3">
+                    <a href="img/DJI_0097.JPG" class="fancybox" data-fancybox="gallery1">
+                        <img src="img/DJI_0097.JPG" width="100%" height="100%">
+                    </a>
+                </div>
+                <div class="item col-sm-6 col-md-4 mb-3">
+                    <a href="img/DJI_0145.JPG" class="fancybox" data-fancybox="gallery1">
+                        <img src="img/DJI_0145.JPG" width="100%" height="100%">
+                    </a>
+                </div>
+                <div class="item col-sm-6 col-md-4 mb-3">
+                    <a href="img/DJI_0085.JPG" class="fancybox" data-fancybox="gallery1">
+                        <img src="img/DJI_0249.JPG" width="100%" height="100%">
+                    </a>
+                </div>
+                <div class="item col-sm-6 col-md-4 mb-3">
+                    <a href="img/DJI_0327.JPG" class="fancybox" data-fancybox="gallery1">
+                        <img src="img/DJI_0327.JPG" width="100%" height="100%">
+                    </a>
+                </div>
+                <div class="item col-sm-6 col-md-4 mb-3">
+                    <a href="img/DJI_0338.JPG" class="fancybox" data-fancybox="gallery1">
+                        <img src="img/DJI_0338.JPG" width="100%" height="100%">
+                    </a>
+                </div>
+                <div class="item col-sm-6 col-md-4 mb-3">
+                    <a href="img/DJI_0352.JPG" class="fancybox" data-fancybox="gallery1">
+                        <img src="img/DJI_0352.JPG" width="100%" height="100%">
+                    </a>
+                </div>
+                <div class="item col-sm-6 col-md-4 mb-3">
+                    <a href="img/DJI_0007.JPG" class="fancybox" data-fancybox="gallery1">
+                        <img src="img/DJI_0097.JPG" width="100%" height="100%">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
     <script>
         const menuToggle = document.querySelector('.toggle')
         const showcase = document.querySelector('.showcase')

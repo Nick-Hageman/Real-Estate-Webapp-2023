@@ -31,6 +31,7 @@ header{
 
 header nav a{
  background-color: transparent;
+ text-decoration: none;
  padding: 40px;
  border: 0;
  font-family: quicksand;
@@ -40,11 +41,11 @@ header nav a{
  cursor: pointer;
  transition-delay: 0s;
  transition-duration: 1s;
- text-decoration: none;
 }
 header nav a:hover{
  color: rgb(205, 50, 50);
  transform: translate(0px, -4px);
+ text-decoration: none;
  text-shadow: 0 6px 6px rgba(0,0,0,1);
 }
 .order-online{

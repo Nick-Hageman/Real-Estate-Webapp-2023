@@ -77,14 +77,14 @@ header nav a:hover{
 .showcase {
     position:absolute;
     right: 0;
-    top: 5%;
+    top: 12%;
     width: 100%;
     min-height: 100vh;
-    padding: 100px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: black;
+    background: rgb(215, 215, 215);
     color: #fff;
     z-index: -1;
     transition: 0.5s;
@@ -102,51 +102,81 @@ header nav a:hover{
     mix-blend-mode: overlay;
 }
 
+
 @media(max-width: 798px) {
-    .showcase, .showcase header {
-        padding: 40px;
-    }
+  .showcase {
+    position:absolute;
+    right: 0;
+    top: 5%;
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(215, 215, 215);
+    color: #fff;
+    z-index: -1;
+    transition: 0.5s;
+}
 
-    .text h2 {
-        font-size: 2.5em;
-    }
+  .showcase, .showcase header {
+      padding: 10px;
+  }
 
-    .text h3 {
-        font-size: 1.5em;
-    }
+  .text h2 {
+      font-size: 2.5em;
+  }
 
-    .text p {
-        font-size: 1em;
-        margin: 20px 0;
-        font-weight: 400;
-        max-width: 700px;
-    }
+  .text h3 {
+      font-size: 1.5em;
+  }
 
-    header{
-        position: fixed;
-        height: 12%;
-        width: 100%;
-        top: 0;
-        display: flex;
-        justify-content: space-evenly;
-        place-items: center;
-        background-color: rgb(41, 44, 41);
-        z-index: 2;
-       }
-       
-       header nav a{
-        background-color: transparent;
-        padding: 10px;
-        border: 0;
-        font-family: quicksand;
-        color: white;
-        text-transform: uppercase;
-        font-size: 1em;
-        cursor: pointer;
-        transition-delay: 0s;
-        transition-duration: 1s;
-        text-decoration: none;
-       }
+  .text p {
+      font-size: 1em;
+      margin: 20px 0;
+      font-weight: 400;
+      max-width: 700px;
+  }
+
+  header{
+      position: fixed;
+      height: 12%;
+      width: 100%;
+      top: 0;
+      display: flex;
+      justify-content: space-evenly;
+      place-items: center;
+      background-color: rgb(41, 44, 41);
+      z-index: 2;
+     }
+     
+     header nav a{
+      background-color: transparent;
+      padding: 10px;
+      border: 0;
+      font-family: quicksand;
+      color: white;
+      text-transform: uppercase;
+      font-size: 1em;
+      cursor: pointer;
+      transition-delay: 0s;
+      transition-duration: 1s;
+      text-decoration: none;
+     }
+
+     .order-online{
+      width: 150px;
+      height: 37.5px;
+      font-size: 1.5em;
+      border-radius: 25px;
+      border: 0;
+      background-color: rgb(205, 50, 50);
+      color: white;
+      font-family: montserrat;
+      cursor: pointer;
+      transition: 0.6s;
+     }
 }
 
 /* Gallery style*/

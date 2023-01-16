@@ -12,10 +12,10 @@
 }
 
 body {
+  overflow: hidden;
   width: 100vw;
   height: 100vh;
   margin: 0;
-  overflow: hidden;
 }
 
 header{
@@ -38,7 +38,7 @@ header nav a{
  font-family: quicksand;
  color: white;
  text-transform: uppercase;
- font-size: 1.5em;
+ font-size: 1.2em;
  cursor: pointer;
  transition-delay: 0s;
  transition-duration: 1s;
@@ -50,9 +50,9 @@ header nav a:hover{
  text-shadow: 0 6px 6px rgba(0,0,0,1);
 }
 .order-online{
- width: 200px;
- height: 50px;
- font-size: 1.5em;
+ width: 175px;
+ height: 35px;
+ font-size: 1.2em;
  border-radius: 25px;
  border: 0;
  background-color: rgb(205, 50, 50);
@@ -69,21 +69,6 @@ header nav a:hover{
 @media(max-width: 798px) {
     .showcase, .showcase header {
         padding: 10px;
-    }
-
-    .text h2 {
-        font-size: 2.5em;
-    }
-
-    .text h3 {
-        font-size: 1.5em;
-    }
-
-    .text p {
-        font-size: 1em;
-        margin: 20px 0;
-        font-weight: 400;
-        max-width: 700px;
     }
 
     header{
@@ -105,7 +90,7 @@ header nav a:hover{
         font-family: quicksand;
         color: white;
         text-transform: uppercase;
-        font-size: 1em;
+        font-size: .8em;
         cursor: pointer;
         transition-delay: 0s;
         transition-duration: 1s;
@@ -113,9 +98,9 @@ header nav a:hover{
        }
 
        .order-online{
-        width: 150px;
-        height: 37.5px;
-        font-size: 1.5em;
+        width: 120px;
+        height: 25px;
+        font-size: .8em;
         border-radius: 25px;
         border: 0;
         background-color: rgb(205, 50, 50);
@@ -129,7 +114,7 @@ header nav a:hover{
 #info {
 	position: absolute;
     color: white;
-	top: 200px;
+	top: 125px;
 	width: 100%;
 	text-align: center;
 	z-index: 100;

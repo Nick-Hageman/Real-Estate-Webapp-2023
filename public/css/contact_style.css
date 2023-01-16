@@ -27,14 +27,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2em;
+    font-size: 1.5em;
     background: grey;
     opacity: 0.9;
 }
 
 .contactUs .title h2 {
     color: white;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .form {
@@ -147,7 +147,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5em;
+    font-size: 1em;
     border-radius: 50%;
     margin-right: 15px;
 }
@@ -286,7 +286,7 @@
 }
 
 .showcase video {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -313,7 +313,7 @@ header nav a{
  font-family: quicksand;
  color: white;
  text-transform: uppercase;
- font-size: 1.5em;
+ font-size: 1.2em;
  cursor: pointer;
  transition-delay: 0s;
  transition-duration: 1s;
@@ -325,9 +325,9 @@ header nav a:hover{
  text-shadow: 0 6px 6px rgba(0,0,0,1);
 }
 .order-online{
- width: 200px;
- height: 50px;
- font-size: 1.5em;
+ width: 175px;
+ height: 35px;
+ font-size: 1.2em;
  border-radius: 25px;
  border: 0;
  background-color: rgb(205, 50, 50);
@@ -363,7 +363,7 @@ header nav a:hover{
         font-family: quicksand;
         color: white;
         text-transform: uppercase;
-        font-size: 1em;
+        font-size: .8em;
         cursor: pointer;
         transition-delay: 0s;
         transition-duration: 1s;
@@ -408,9 +408,9 @@ header nav a:hover{
     }
 
     .order-online{
-        width: 150px;
-        height: 37.5px;
-        font-size: 1.5em;
+        width: 120px;
+        height: 25px;
+        font-size: .8em;
         border-radius: 25px;
         border: 0;
         background-color: rgb(205, 50, 50);

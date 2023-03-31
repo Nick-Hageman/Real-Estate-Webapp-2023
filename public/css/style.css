@@ -71,6 +71,12 @@ header nav a:hover{
 .logo {
     text-transform: uppercase;
     cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+
+.logo-container {
+    width: 15%;
 }
 
 .showcase {
@@ -212,10 +218,10 @@ header nav a:hover{
         text-decoration: none;
        }
 
-       .order-online{
-        width: 120px;
+       button.order-online{
+        width: 0px;
         height: 25px;
-        font-size: 1em;
+        font-size: 0em;
         border-radius: 25px;
         border: 0;
         background-color: rgb(205, 50, 50);
@@ -224,4 +230,8 @@ header nav a:hover{
         cursor: pointer;
         transition: 0.6s;
        }
+
+       .logo-container {
+        width: 35%;
+        }
 }

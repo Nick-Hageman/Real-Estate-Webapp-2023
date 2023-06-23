@@ -12,9 +12,21 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { createTheme } from '@mui/material/styles';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['Home', 'Available Lots', 'Portfolio', 'Floorplans'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#2e333b',
+    },
+    secondary: {
+      main: '#f44336',
+    },
+  },
+});
 
 export default function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -36,7 +48,7 @@ export default function Navbar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" theme={theme}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />

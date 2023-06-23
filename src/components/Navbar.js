@@ -7,12 +7,11 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import { createTheme } from '@mui/material/styles';
+import Fab from '@mui/material/Fab';
+import SendIcon from '@mui/icons-material/Send';
 
 const pages = ['Home', 'Available Lots', 'Portfolio', 'Floorplans'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -20,7 +19,7 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#2e333b',
+      main: 'rgb(46, 51, 59)',
     },
     secondary: {
       main: '#f44336',
@@ -28,7 +27,18 @@ const theme = createTheme({
   },
 });
 
-export default function Navbar() {
+const buttonTheme = createTheme({
+    palette: {
+      primary: {
+        main: 'rgb(42, 47, 56)',
+      },
+      secondary: {
+        main: '#000000',
+      },
+    },
+  });
+
+export default function Navbar({handleClick}) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -39,7 +49,7 @@ export default function Navbar() {
     setAnchorElUser(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (page) => {
     setAnchorElNav(null);
   };
 
@@ -48,28 +58,10 @@ export default function Navbar() {
   };
 
   return (
-    <AppBar position="static" theme={theme}>
+    <AppBar position="static" sx={{ p: 1 }} theme={theme}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography>
-
+          <a href="index.html"><img src="img/transparent-black-logo.png" alt="Hageman Homes Logo" height="110"/></a>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -86,12 +78,12 @@ export default function Navbar() {
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: 'bottom',
-                horizontal: 'left',
+                horizontal: 'right',
               }}
               keepMounted
               transformOrigin={{
                 vertical: 'top',
-                horizontal: 'left',
+                horizontal: 'right',
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
@@ -106,66 +98,24 @@ export default function Navbar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Button
+            <Button
+                theme={buttonTheme}
                 key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
+                onClick={() => handleClick(page)}
+                size='large'
+                variant="contained"
+                sx={{ my: 2, mx: 5, color: 'white', display: 'block', "&:hover": { color: "white" } }}
+            >
                 {page}
-              </Button>
+            </Button>
             ))}
           </Box>
-
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
+          <Fab variant="extended">
+                <SendIcon sx={{ mr: 1 }} />
+                Contact
+            </Fab>
         </Toolbar>
       </Container>
     </AppBar>

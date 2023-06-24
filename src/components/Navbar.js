@@ -13,8 +13,7 @@ import { createTheme } from '@mui/material/styles';
 import Fab from '@mui/material/Fab';
 import SendIcon from '@mui/icons-material/Send';
 
-const pages = ['Home', 'Available Lots', 'Portfolio', 'Floorplans'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['Home', 'Available Lots', 'Portfolio', 'Floorplans', "Contact"];
 
 const theme = createTheme({
   palette: {
@@ -61,7 +60,7 @@ export default function Navbar({handleClick}) {
     <AppBar position="static" sx={{ p: 1 }} theme={theme}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <a href="index.html"><img src="img/transparent-black-logo.png" alt="Hageman Homes Logo" height="110"/></a>
+          <a href="index.html" className='nav-logo-container'><img src="img/transparent-black-logo.png" alt="Hageman Homes Logo" className='nav-logo'/></a>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -92,7 +91,7 @@ export default function Navbar({handleClick}) {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page} onClick={() => handleClick(page)}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
@@ -112,10 +111,10 @@ export default function Navbar({handleClick}) {
             </Button>
             ))}
           </Box>
-          <Fab variant="extended">
+          {/* <Fab variant="extended">
                 <SendIcon sx={{ mr: 1 }} />
                 Contact
-            </Fab>
+            </Fab> */}
         </Toolbar>
       </Container>
     </AppBar>

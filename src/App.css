@@ -6,11 +6,19 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-logo {
+  width: 100%;
+  height: auto;
+}
+
+.nav-logo-container {
+  width: 12%;
+  height: auto;
+}
+
+@media(max-width: 798px) {
+  .nav-logo-container {
+    width: 30%;
+    height: auto;
+  }  
 }

@@ -4,7 +4,7 @@ import HouseCard from './HouseCard'
 export default function LandingPage() {
     return (
       <div>
-        <HouseCard />
+        Portfolio
       </div>
     );
 }

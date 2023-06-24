@@ -4,6 +4,8 @@ import React from 'react'
 import Navbar from "./components/Navbar";
 import LandingPage from "./components/LandingPage";
 import AvailableLots from "./components/AvailableLots";
+import Portfolio from "./components/Portfolio";
+import Floorplans from "./components/Floorplans";
 
 function App() {
 
@@ -16,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <Navbar handleClick={handleClick} />
-      {page === "Home" ? <LandingPage /> : <AvailableLots />}
+      {page === "Home" ? <LandingPage /> : page === "Available Lots" ? <AvailableLots /> :  page === "Portfolio" ? <Portfolio /> : <Floorplans />}
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../LandingPage.css';
-import HouseCard from './HouseCard'
-export default function LandingPage() {
+
+export default function Portfolio() {
     return (
       <div>
         Portfolio

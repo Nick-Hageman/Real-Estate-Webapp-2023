@@ -1,10 +1,32 @@
 import React, { Component } from 'react';
 import '../LandingPage.css';
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
 
 export default function Portfolio() {
+    let itemData = [ // Need to fetch images from CMS
+      {img: "img/DJI_0085.JPG"},
+      {img: "img/DJI_0009.JPG"},
+      {img: "img/DJI_0085.JPG"},
+      {img: "img/DJI_0009.JPG"},
+      {img: "img/DJI_0085.JPG"},
+      {img: "img/DJI_0009.JPG"},
+      {img: "img/DJI_0085.JPG"},
+      {img: "img/DJI_0009.JPG"},
+      {img: "img/DJI_0146.JPG"}
+    ]
+
     return (
-      <div>
-        Portfolio
+      <div className='gallery-container'>
+        {itemData.map((item) => (
+            <img
+              className='gallery-item'
+              src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+              srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+              alt={item.title}
+              loading="lazy"
+            />
+        ))}
       </div>
     );
 }

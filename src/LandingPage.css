@@ -5,6 +5,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+  background-color: rgb(36, 40, 47);
+}
+
 
 #bgVideo {
   position: absolute;
@@ -85,6 +89,23 @@
   padding:0;
 }
 
+.gallery-container {
+  padding: 10px;
+}
+
+.gallery-item {
+  display:inline;
+  height:30vh;
+  width: auto;
+  border-radius: 25px;
+  padding: 5px;
+  background-color: rgba(46, 51, 59)
+}
+
+.gallery-item:hover {
+  box-shadow: 0 0 32px #333;
+}
+
 @media(max-width: 798px) {
   .landing-text h2 {
       font-size: 2.5em;
@@ -99,5 +120,14 @@
       margin: 20px 0;
       font-weight: 400;
       max-width: 700px;
+  }
+
+  .gallery-item {
+    display:inline;
+    height:auto;
+    width:90vw;
+    border-radius: 25px;
+    padding: 5px;
+    background-color: rgba(46, 51, 59)
   }
 }

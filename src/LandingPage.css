@@ -95,11 +95,22 @@ body {
 
 .gallery-item {
   display:inline;
-  height:30vh;
+  height:35vh;
   width: auto;
   border-radius: 25px;
   padding: 5px;
-  background-color: rgba(46, 51, 59)
+  background-color: rgb(36, 37, 39);
+}
+
+.HouseCard-container {
+  padding: 20px;
+}
+
+.HouseCard-item {
+  display:inline;
+  width: auto;
+  padding: 10px;
+  float:left;
 }
 
 .gallery-item:hover {
@@ -130,4 +141,80 @@ body {
     padding: 5px;
     background-color: rgba(46, 51, 59)
   }
+}
+
+/* DATA TABLE */
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.table-rwd {
+  font-size: 0.85em;
+  border: 1px solid rgba(181, 213, 144, 0.5);
+  color: #666;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+.table-rwd td,
+.table-rwd th {
+  padding: 0.8em;
+  border-bottom: 1px solid rgba(181, 213, 144, 0.5);
+}
+.table-rwd th {
+  background: var(--color-main);
+  color: #fff;
+  font-weight: normal;
+  text-align: right;
+}
+.table-rwd td {
+  text-align: left;
+}
+.value-rwd td:before {
+  content: "$ ";
+  color: var(--color-main);
+}
+.value-rwd td:after {
+  content: ".00";
+}
+.table-rwd td:first-of-type {
+  text-align: left;
+}
+.table-rwd td:first-of-type:before {
+  content: "";
+}
+.table-rwd td:first-of-type:after {
+  content: "";
+}
+.table-rwd tr:hover {
+  background: rgba(181, 213, 144, 0.2);
+}
+.value-rwd-right {
+  background: rgba(181, 213, 144, 0.2);
+}
+
+.table-container {
+  overflow-x: hidden;
+}
+
+.table-rwd {
+  min-width: 90%;
+}
+.table-rwd td:first-child {
+  position: absolute;
+  width: 8em;
+}
+.table-rwd th:first-child {
+  width: 8em;
+}
+.table-rwd tr:hover td:first-child {
+  background: var(--color-main);
+  color: #fff;
+}
+
+.table-rwd tr:nth-child(2) td:first-child {
+  box-shadow: 0 -2.7em 0 -6px var(--color-main),
+    -6px -2.7em 0 -6px var(--color-main);
 }

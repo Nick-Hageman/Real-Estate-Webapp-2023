@@ -152,15 +152,12 @@ export default function Navbar({handleClick}) {
                   <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                     tjhageman@mchsi.com<br/>563-552-9940
                   </Typography>
+                  <a className='modal-logo-container'><img src="img/transparent-white-logo.png" alt="Hageman Homes Logo" className='modal-logo'/></a>
                 </Box>
               </Modal>
             </div>
             ))}
           </Box>
-          {/* <Fab variant="extended">
-                <SendIcon sx={{ mr: 1 }} />
-                Contact
-            </Fab> */}
         </Toolbar>
       </Container>
     </AppBar>

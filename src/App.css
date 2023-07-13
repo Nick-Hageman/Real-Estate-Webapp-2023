@@ -23,6 +23,19 @@
   height: auto;
 }
 
+.modal-logo {
+  width: 100%;
+  height: auto;
+}
+
+.modal-logo-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40%;
+  height: auto;
+}
+
 @media(max-width: 798px) {
   .nav-logo-container {
     width: 30%;

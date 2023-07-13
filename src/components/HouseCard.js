@@ -13,6 +13,8 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { createTheme } from '@mui/material/styles';
 import SellIcon from '@mui/icons-material/Sell';
+import House3D from './House3D'
+import { Canvas } from "@react-three/fiber";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -26,7 +28,9 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function HouseCard() {
+export default function HouseCard(props) {
+  const dataset = props.data.attributes;
+  //console.log(dataset); //view data from API
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -56,15 +60,15 @@ export default function HouseCard() {
             <MoreVertIcon />
           </IconButton>
         }
-        title={<Typography variant="body2" color="white">Lot 34 Phase 3</Typography>}
-        subheader={<Typography variant="body2" color="white">2031 Castle Hill Dr SE</Typography>}
+        title={<Typography variant="body2" color="white">{"Lot: " + dataset.lot}</Typography>}
+        subheader={<Typography variant="body2" color="white">{"Address: " + dataset.address}</Typography>}
       />
-      <CardMedia
-        component="img"
-        height="194"
-        image="img/DJI_0097.JPG"
-        alt="Paella dish"
-      />
+      <Canvas>
+          <perspectiveCamera position={[0, 0, 0]} />
+          <pointLight position={[10, 10, 10]} />
+          <ambientLight />
+          <House3D position={[0, -1, -1]} url={dataset.value}/>
+      </Canvas>
       <CardContent>
       <div class="table-container">
         <table class="table-rwd">
@@ -75,7 +79,7 @@ export default function HouseCard() {
           <tr>
             <td>Status</td>
             <td>
-              For Sale
+              {dataset.status}
               <IconButton aria-label="" theme={buttonTheme} color='secondary'>
                 <SellIcon fontSize='small' />
               </IconButton>
@@ -83,23 +87,23 @@ export default function HouseCard() {
           </tr>
           <tr>
             <td>Address</td>
-            <td>2031 Castle Hill Dr</td>
+            <td>{dataset.address}</td>
           </tr>
           <tr>
             <td>Sq Feet</td>
-            <td>24,000</td>
+            <td>{dataset.sqfoot + " ft"}</td>
           </tr>
           <tr>
             <td>Bedrooms</td>
-            <td>5</td>
+            <td>{dataset.bedrooms}</td>
           </tr>
           <tr>
             <td>Bathrooms</td>
-            <td>3</td>
+            <td>{dataset.baths}</td>
           </tr>
           <tr className='value-rwd'>
             <td>Land Value</td>
-            <td className='value-rwd-right'>173,421</td>
+            <td className='value-rwd-right'>{dataset.landvalue}</td>
           </tr>
         </table>
       </div>
@@ -116,7 +120,7 @@ export default function HouseCard() {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph color="grey">MORE INFO:</Typography>
+          <Typography paragraph color="grey">{dataset.info}</Typography>
         </CardContent>
       </Collapse>
     </Card>

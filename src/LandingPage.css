@@ -173,7 +173,6 @@ h1 {
   text-align: left;
 }
 .value-rwd td:before {
-  content: "$ ";
   color: var(--color-main);
 }
 .value-rwd td:after {

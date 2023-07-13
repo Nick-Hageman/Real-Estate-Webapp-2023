@@ -10,8 +10,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { createTheme } from '@mui/material/styles';
-import Fab from '@mui/material/Fab';
-import SendIcon from '@mui/icons-material/Send';
+import Modal from '@mui/material/Modal';
 
 const pages = ['Home', 'Available Lots', 'Portfolio', 'Floorplans', "Contact"];
 
@@ -27,19 +26,34 @@ const theme = createTheme({
 });
 
 const buttonTheme = createTheme({
-    palette: {
-      primary: {
-        main: 'rgb(42, 47, 56)',
-      },
-      secondary: {
-        main: '#000000',
-      },
+  palette: {
+    primary: {
+      main: 'rgb(42, 47, 56)',
     },
-  });
+    secondary: {
+      main: '#000000',
+    },
+  },
+});
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
 
 export default function Navbar({handleClick}) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -91,7 +105,12 @@ export default function Navbar({handleClick}) {
               }}
             >
               {pages.map((page) => (
+                page != "Contact" ?
                 <MenuItem key={page} onClick={() => handleClick(page)}>
+                  <Typography textAlign="center">{page}</Typography>
+                </MenuItem>
+                :
+                <MenuItem key={page} onClick={() => handleOpen()}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
@@ -99,6 +118,7 @@ export default function Navbar({handleClick}) {
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
+            page != "Contact" ?
             <Button
                 theme={buttonTheme}
                 key={page}
@@ -108,7 +128,33 @@ export default function Navbar({handleClick}) {
                 sx={{ my: 2, mx: 5, color: 'white', display: 'block', "&:hover": { color: "white" } }}
             >
                 {page}
-            </Button>
+            </Button> :
+            <div>
+                <Button
+                theme={buttonTheme}
+                key={page}
+                onClick={() => {handleOpen()}}
+                size='large'
+                variant="contained"
+                sx={{ my: 2, mx: 5, color: 'white', display: 'block', "&:hover": { color: "white" } }}
+                > CONTACT
+                </Button>
+              <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+              >
+                <Box sx={style}>
+                  <Typography id="modal-modal-title" variant="h6" component="h2">
+                    Tom Hageman
+                  </Typography>
+                  <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                    tjhageman@mchsi.com<br/>563-552-9940
+                  </Typography>
+                </Box>
+              </Modal>
+            </div>
             ))}
           </Box>
           {/* <Fab variant="extended">

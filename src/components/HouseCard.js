@@ -14,6 +14,14 @@ import { createTheme } from '@mui/material/styles';
 import SellIcon from '@mui/icons-material/Sell';
 import House3D from './House3D'
 import { Canvas } from "@react-three/fiber";
+import Tooltip from '@mui/material/Tooltip';
+import Snackbar from '@mui/material/Snackbar';
+import Slide from '@mui/material/Slide';
+import MuiAlert from '@mui/material/Alert';
+
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -27,10 +35,35 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
+function SlideTransition(props) {
+  return <Slide {...props} direction="up" />;
+}
+
 export default function HouseCard(props) {
   const dataset = props.data.attributes;
   //console.log(dataset); //view data from API
   const [expanded, setExpanded] = React.useState(false);
+  const [state, setState] = React.useState({
+    open: false,
+    Transition: Slide,
+  });
+
+  const handleClick = (Transition) => () => {
+    const linkToCopy = 'https://hageman-homes.com';
+    navigator.clipboard.writeText(linkToCopy)
+    
+    setState({
+      open: true,
+      Transition,
+    });
+  };
+
+  const handleClose = () => {
+    setState({
+      ...state,
+      open: false,
+    });
+  };
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -55,9 +88,22 @@ export default function HouseCard(props) {
           <Avatar alt="Remy Sharp" src="img/black-logo.jpg" />
         }
         action={
-          <IconButton aria-label="" theme={buttonTheme} color='secondary'>
-            <MoreVertIcon />
-          </IconButton>
+          <Tooltip title="Copy Link" placement="top" arrow>
+            <IconButton aria-label="" theme={buttonTheme} color='secondary'>
+              <MoreVertIcon onClick={handleClick(SlideTransition)}/>
+              <Snackbar
+                open={state.open}
+                onClose={handleClose}
+                TransitionComponent={state.Transition}
+                message="Link Copied"
+                key={state.Transition.name}
+              >
+                <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+                Link Copied
+                </Alert>
+              </Snackbar>
+            </IconButton>
+          </Tooltip>
         }
         title={<Typography variant="body2" color="white">{"Lot: " + dataset.lot}</Typography>}
         subheader={<Typography variant="body2" color="white">{"Address: " + dataset.address}</Typography>}

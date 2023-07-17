@@ -2,7 +2,6 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
-import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
@@ -65,9 +64,8 @@ export default function HouseCard(props) {
       />
       <Canvas>
           <perspectiveCamera position={[0, 0, 0]} />
-          <pointLight position={[10, 10, 10]} />
-          <ambientLight />
-          <House3D position={[0, -1, -1]} url={dataset.value}/>
+          <ambientLight intensity={0.25} />
+          <House3D position={[0, -1, -2]} url={dataset.value}/>
       </Canvas>
       <CardContent>
       <div class="table-container">

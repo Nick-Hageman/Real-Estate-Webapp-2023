@@ -175,9 +175,6 @@ h1 {
 .value-rwd td:before {
   color: var(--color-main);
 }
-.value-rwd td:after {
-  content: ".00";
-}
 .table-rwd td:first-of-type {
   text-align: left;
 }

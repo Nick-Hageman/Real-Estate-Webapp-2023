@@ -10,7 +10,7 @@ function House3D(props) {
   const [clicked, click] = useState(false);
 
   // Subscribe this component to the render-loop, rotate the mesh every frame
-  useFrame((state, delta) => (ref.current.rotation.y += 0.01));
+  useFrame((state, delta) => (ref.current.rotation.y += 0.006));
   // Return the view, these are regular Threejs elements expressed in JSX
   const gltf = useLoader(GLTFLoader, props.url);
 
@@ -18,7 +18,7 @@ function House3D(props) {
     <mesh
       {...props}
       ref={ref}
-      scale={3}
+      scale={.01}
       onClick={(event) => click(!clicked)}
       onPointerOver={(event) => hover(true)}
       onPointerOut={(event) => hover(false)}

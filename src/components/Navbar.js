@@ -150,7 +150,7 @@ export default function Navbar({handleClick}) {
                     Tom Hageman
                   </Typography>
                   <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                    tjhageman@mchsi.com<br/>563-552-9940
+                  (563) 581-9234<br/>tjhageman5@gmail.com<br/>Dyersville, IA, United States, 52040
                   </Typography>
                   <a className='modal-logo-container'><img src="img/transparent-white-logo.png" alt="Hageman Homes Logo" className='modal-logo'/></a>
                 </Box>

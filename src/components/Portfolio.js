@@ -1,7 +1,4 @@
-import React, { Component } from 'react';
 import '../LandingPage.css';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
 
 export default function Portfolio() {
     let itemData = [ // Need to fetch images from CMS

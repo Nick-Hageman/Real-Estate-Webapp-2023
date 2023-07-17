@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build --public-url=./",
+    "build": "react-scripts build --public-url=./public/",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

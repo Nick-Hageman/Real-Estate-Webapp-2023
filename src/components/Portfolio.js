@@ -4,12 +4,12 @@ export default function Portfolio() {
     let itemData = [ // Need to fetch images from CMS
       {img: "img/DJI_0085.JPG"},
       {img: "img/DJI_0009.JPG"},
-      {img: "img/DJI_0085.JPG"},
-      {img: "img/DJI_0009.JPG"},
-      {img: "img/DJI_0085.JPG"},
-      {img: "img/DJI_0009.JPG"},
-      {img: "img/DJI_0085.JPG"},
-      {img: "img/DJI_0009.JPG"},
+      {img: "img/DJI_0352.JPG"},
+      {img: "img/DJI_0011.JPG"},
+      {img: "img/DJI_0249.JPG"},
+      {img: "img/DJI_0060.JPG"},
+      {img: "img/DJI_0097.JPG"},
+      {img: "img/DJI_0338.JPG"},
       {img: "img/DJI_0146.JPG"}
     ]
 

@@ -1,0 +1,114 @@
+{
+    "data": [
+      {
+        "id": 10,
+        "attributes": {
+          "status": "FOR SALE",
+          "address": "N/A (SPEC)",
+          "sqfoot": "1894",
+          "bedrooms": "4",
+          "baths": "2",
+          "landvalue": "TBD",
+          "value": "https://res.cloudinary.com/dh9rf4vga/image/upload/v1689533753/SPEC0102_jtauq3.glb",
+          "lot": "Spec House 0102",
+          "info": "NO LOT INFORMATION (SPEC)",
+          "createdAt": "2023-07-16T19:04:47.402Z",
+          "updatedAt": "2023-07-16T19:05:27.407Z",
+          "publishedAt": "2023-07-16T19:05:27.337Z"
+        }
+      },
+      {
+        "id": 3,
+        "attributes": {
+          "status": "FOR SALE",
+          "address": "N/A (SPEC)",
+          "sqfoot": "1890.7",
+          "bedrooms": "3",
+          "baths": "2",
+          "landvalue": "TBD",
+          "value": "https://res.cloudinary.com/dh9rf4vga/image/upload/v1689533748/SPEC0105FRAMED_tekom6.glb",
+          "lot": "Spec House 0109",
+          "info": "NO LOT INFORMATION (SPEC)",
+          "createdAt": "2023-07-16T18:59:52.604Z",
+          "updatedAt": "2023-07-16T19:00:18.124Z",
+          "publishedAt": "2023-07-16T19:00:18.051Z"
+        }
+      },
+      {
+        "id": 5,
+        "attributes": {
+          "status": "FOR SALE",
+          "address": "N/A (SPEC)",
+          "sqfoot": "4105",
+          "bedrooms": "4",
+          "baths": "4",
+          "landvalue": "TBD",
+          "value": "https://res.cloudinary.com/dh9rf4vga/image/upload/v1689533754/SPEC0108_p0ovtk.glb",
+          "lot": "Spec House 0108",
+          "info": "NO LOT INFORMATION (SPEC)",
+          "createdAt": "2023-07-16T19:01:28.404Z",
+          "updatedAt": "2023-07-16T19:02:10.719Z",
+          "publishedAt": "2023-07-16T19:02:10.649Z"
+        }
+      },
+      {
+        "id": 6,
+        "attributes": {
+          "status": "FOR SALE",
+          "address": "N/A (SPEC)",
+          "sqfoot": "3747.8",
+          "bedrooms": "4",
+          "baths": "3",
+          "landvalue": "TBD",
+          "value": "https://res.cloudinary.com/dh9rf4vga/image/upload/v1689533753/SPEC0107_wqqhef.glb",
+          "lot": "Spec House 0107",
+          "info": "NO LOT INFORMATION (SPEC)",
+          "createdAt": "2023-07-16T19:02:15.639Z",
+          "updatedAt": "2023-07-16T19:02:54.537Z",
+          "publishedAt": "2023-07-16T19:02:54.469Z"
+        }
+      },
+      {
+        "id": 7,
+        "attributes": {
+          "status": "FOR SALE",
+          "address": "N/A (SPEC)",
+          "sqfoot": "1824",
+          "bedrooms": "3",
+          "baths": "2",
+          "landvalue": "TBD",
+          "value": "https://res.cloudinary.com/dh9rf4vga/image/upload/v1689533753/SPEC0105_w54c3p.glb",
+          "lot": "Spec House 0105",
+          "info": "NO LOT INFORMATION (SPEC)",
+          "createdAt": "2023-07-16T19:02:59.104Z",
+          "updatedAt": "2023-07-16T19:03:35.907Z",
+          "publishedAt": "2023-07-16T19:03:35.835Z"
+        }
+      },
+      {
+        "id": 8,
+        "attributes": {
+          "status": "FOR SALE",
+          "address": "N/A (SPEC)",
+          "sqfoot": "1901",
+          "bedrooms": "4",
+          "baths": "2",
+          "landvalue": "TBD",
+          "value": "https://res.cloudinary.com/dh9rf4vga/image/upload/v1689533751/SPEC0100_z4bhpp.glb",
+          "lot": "Spec House 0100",
+          "info": "NO LOT INFORMATION (SPEC)",
+          "createdAt": "2023-07-16T19:03:40.570Z",
+          "updatedAt": "2023-07-16T19:04:12.806Z",
+          "publishedAt": "2023-07-16T19:04:12.737Z"
+        }
+      }
+    ],
+    "meta": {
+      "pagination": {
+        "page": 1,
+        "pageSize": 25,
+        "pageCount": 1,
+        "total": 6
+      }
+    }
+  }
